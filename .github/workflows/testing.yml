@@ -20,7 +20,7 @@ jobs:
         CACHE_CLEAR: TRUE
         
         # GITHUB file location
-        TPO_SRC_PATH: "./css/"
+        TPO_SRC_PATH: "css/"
 
         # WPEngine server location
         TPO_PATH: "wp-content/themes/smashed/"
