@@ -1,0 +1,30 @@
+name: Deploy to testing
+
+on:
+  push:
+    branches: [ staging ]
+
+jobs:
+  build:
+    name: Deploy to smshonlinetest 
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: GitHub Action Deploy to WP Engine
+      uses: wpengine/github-action-wpe-site-deploy@v2.3.3
+      with:
+    
+      # Deploy vars
+        WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }} 
+        PHP_LINT: false
+        CACHE_CLEAR: TRUE
+        
+        # GITHUB file location
+        TPO_SRC_PATH: "css/"
+
+        # WPEngine server location
+        TPO_PATH: "wp-content/themes/smashed/css"
+
+      # Branches & Environments 
+        DEV_BRANCH: staging
+        DEV_ENV: smshonlinestg
