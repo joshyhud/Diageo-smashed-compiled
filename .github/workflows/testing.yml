@@ -23,7 +23,7 @@ jobs:
         TPO_SRC_PATH: "css/"
 
         # WPEngine server location
-        TPO_PATH: "wp-content/themes/smashed/"
+        TPO_PATH: "wp-content/themes/smashed/css"
 
       # Branches & Environments 
         DEV_BRANCH: testing
